@@ -15,7 +15,10 @@
     },
     "homepage": "https://github.com/fuyanlove/pkg-common#readme",
     "dependencies": {
-        "dayjs": "^1.11.13"
+        "axios": "^1.7.7",
+        "dayjs": "^1.11.13",
+        "element-plus": "^2.8.4",
+        "fingerprintjs2": "^2.1.4"
     },
     "devDependencies": {
         "@babel/core": "^7.25.2",
