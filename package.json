@@ -1,7 +1,7 @@
 {
-    "name": "@fuyanlove/pkg-common",
+    "name": "@iruxu/pkg-common",
     "version": "0.0.1",
-    "description": "FUYANLOVE common package",
+    "description": "iruxu common package",
     "main": "main.js",
     "scripts": {
         "test": "jest"
