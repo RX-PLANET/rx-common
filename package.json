@@ -1,0 +1,27 @@
+{
+    "name": "@fuyanlove/pkg-common",
+    "version": "0.0.1",
+    "description": "FUYANLOVE common package",
+    "main": "main.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fuyanlove/pkg-common.git"
+    },
+    "bugs": {
+        "url": "https://github.com/fuyanlove/pkg-common/issues"
+    },
+    "homepage": "https://github.com/fuyanlove/pkg-common#readme",
+    "dependencies": {
+        "dayjs": "^1.11.13"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.25.2",
+        "@babel/preset-env": "^7.25.4",
+        "babel-jest": "^29.7.0",
+        "jest": "^29.7.0",
+        "mockdate": "^3.0.5"
+    }
+}
