@@ -119,6 +119,132 @@
             "name": "Svenska",
             "country": "Sverige",
             "countryCode": "se"
+        },
+        {
+            "langCode": "ar-SA",
+            "name": "العربية",
+            "country": "المملكة العربية السعودية",
+            "countryCode": "sa"
+        },
+        {
+            "langCode": "hi-IN",
+            "name": "हिन्दी",
+            "country": "भारत",
+            "countryCode": "in"
+        },
+        {
+            "langCode": "bn-BD",
+            "name": "বাংলা",
+            "country": "বাংলাদেশ",
+            "countryCode": "bd"
+        },
+        {
+            "langCode": "th-TH",
+            "name": "ไทย",
+            "country": "ประเทศไทย",
+            "countryCode": "th"
+        },
+        {
+            "langCode": "ur-PK",
+            "name": "اردو",
+            "country": "پاکستان",
+            "countryCode": "pk"
+        },
+        {
+            "langCode": "vi-VN",
+            "name": "Tiếng Việt",
+            "country": "Việt Nam",
+            "countryCode": "vn"
+        },
+        {
+            "langCode": "sw-KE",
+            "name": "Kiswahili",
+            "country": "Kenya",
+            "countryCode": "ke"
+        },
+        {
+            "langCode": "pa-IN",
+            "name": "ਪੰਜਾਬੀ",
+            "country": "India",
+            "countryCode": "in"
+        },
+        {
+            "langCode": "ta-IN",
+            "name": "தமிழ்",
+            "country": "India",
+            "countryCode": "in"
+        },
+        {
+            "langCode": "ml-IN",
+            "name": "മലയാളം",
+            "country": "India",
+            "countryCode": "in"
+        },
+        {
+            "langCode": "fa-IR",
+            "name": "فارسی",
+            "country": "ایران",
+            "countryCode": "ir"
+        },
+        {
+            "langCode": "ha-NG",
+            "name": "Hausa",
+            "country": "Nigeria",
+            "countryCode": "ng"
+        },
+        {
+            "langCode": "tl-PH",
+            "name": "Filipino",
+            "country": "Philippines",
+            "countryCode": "ph"
+        },
+        {
+            "langCode": "my-MM",
+            "name": "မြန်မာ",
+            "country": "Myanmar",
+            "countryCode": "mm"
+        },
+        {
+            "langCode": "am-ET",
+            "name": "አማርኛ",
+            "country": "Ethiopia",
+            "countryCode": "et"
+        },
+        {
+            "langCode": "ne-NP",
+            "name": "नेपाली",
+            "country": "Nepal",
+            "countryCode": "np"
+        },
+        {
+            "langCode": "zu-ZA",
+            "name": "IsiZulu",
+            "country": "South Africa",
+            "countryCode": "za"
+        },
+        {
+            "langCode": "ca-ES",
+            "name": "Català",
+            "country": "Espanya",
+            "countryCode": "es"
+        },
+        {
+            "langCode": "cy-GB",
+            "name": "Cymraeg",
+            "country": "United Kingdom",
+            "countryCode": "gb"
+        },
+        {
+            "langCode": "ga-IE",
+            "name": "Gaeilge",
+            "country": "Ireland",
+            "countryCode": "ie"
+        },
+        {
+            "langCode": "he-IL",
+            "name": "עברית",
+            "country": "ישראל",
+            "countryCode": "il"
         }
     ]
 }
