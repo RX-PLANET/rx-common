@@ -1,0 +1,124 @@
+{
+    "languages": [
+        {
+            "langCode": "en-US",
+            "name": "English",
+            "country": "United States",
+            "countryCode": "us"
+        },
+        {
+            "langCode": "zh-CN",
+            "name": "简体中文",
+            "country": "中国",
+            "countryCode": "cn"
+        },
+        {
+            "langCode": "zh-TW",
+            "name": "繁體中文",
+            "country": "中国台湾",
+            "countryCode": "cn"
+        },
+        {
+            "langCode": "ja-JP",
+            "name": "日本語",
+            "country": "日本",
+            "countryCode": "jp"
+        },
+        {
+            "langCode": "ko-KR",
+            "name": "한국어",
+            "country": "대한민국",
+            "countryCode": "kr"
+        },
+        {
+            "langCode": "es-ES",
+            "name": "Español",
+            "country": "España",
+            "countryCode": "es"
+        },
+        {
+            "langCode": "fr-FR",
+            "name": "Français",
+            "country": "France",
+            "countryCode": "fr"
+        },
+        {
+            "langCode": "de-DE",
+            "name": "Deutsch",
+            "country": "Deutschland",
+            "countryCode": "de"
+        },
+        {
+            "langCode": "it-IT",
+            "name": "Italiano",
+            "country": "Italia",
+            "countryCode": "it"
+        },
+        {
+            "langCode": "pt-BR",
+            "name": "Português",
+            "country": "Brasil",
+            "countryCode": "br"
+        },
+        {
+            "langCode": "ru-RU",
+            "name": "Русский",
+            "country": "Россия",
+            "countryCode": "ru"
+        },
+        {
+            "langCode": "tr-TR",
+            "name": "Türkçe",
+            "country": "Türkiye",
+            "countryCode": "tr"
+        },
+        {
+            "langCode": "cs-CZ",
+            "name": "Čeština",
+            "country": "Česká republika",
+            "countryCode": "cz"
+        },
+        {
+            "langCode": "da-DK",
+            "name": "Dansk",
+            "country": "Danmark",
+            "countryCode": "dk"
+        },
+        {
+            "langCode": "id-ID",
+            "name": "Indonesia",
+            "country": "Indonesia",
+            "countryCode": "id"
+        },
+        {
+            "langCode": "hu-HU",
+            "name": "Magyar",
+            "country": "Magyarország",
+            "countryCode": "hu"
+        },
+        {
+            "langCode": "nl-NL",
+            "name": "Nederlands",
+            "country": "Nederland",
+            "countryCode": "nl"
+        },
+        {
+            "langCode": "no-NO",
+            "name": "Norsk",
+            "country": "Norge",
+            "countryCode": "no"
+        },
+        {
+            "langCode": "pl-PL",
+            "name": "Polski",
+            "country": "Polska",
+            "countryCode": "pl"
+        },
+        {
+            "langCode": "sv-SE",
+            "name": "Svenska",
+            "country": "Sverige",
+            "countryCode": "se"
+        }
+    ]
+}
