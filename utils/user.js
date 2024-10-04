@@ -204,7 +204,7 @@ class User {
             const murmur = Fingerprint2.x64hash128(values.join(""), 31);
 
             localStorage.setItem("fingerprint", murmur);
-            callback(murmur);
+            callback && callback(murmur);
         });
     }
 

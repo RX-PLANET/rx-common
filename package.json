@@ -1,6 +1,6 @@
 {
     "name": "@iruxu/pkg-common",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "iruxu common package",
     "main": "main.js",
     "scripts": {
