@@ -70,8 +70,8 @@ class User {
      * @memberof User
      */
     _save(data) {
-        this.userData = data;
-        localStorage.setItem(User.TOKEN_KEY, data.token);
+        this.profile = data;
+        data.token && localStorage.setItem(User.TOKEN_KEY, data.token);
         localStorage.setItem(User.LAST_AUTH, Date.now());
         localStorage.setItem("logged_in", true);
 
