@@ -35,4 +35,54 @@ function $uc(options) {
     return ins;
 }
 
-export { $uc };
+// cms通用请求接口
+function $cms(options) {
+    let domain = (options && options.domain) || process.env.VUE_APP_CMS_API;
+    let config = {
+        // 同时发送cookie和basic auth
+        withCredentials: true,
+        headers: {
+            Authorization: "Bearer " + User.getToken(),
+        },
+        baseURL: domain,
+    };
+
+    if (options && options.progress) {
+        config.onUploadProgress = options.progress;
+    }
+
+    // 创建实例
+    const ins = axios.create(config);
+
+    // 指定拦截器
+    installStandardInterceptors(ins, options);
+
+    return ins;
+}
+
+// os通用请求接口
+function $os(options) {
+    let domain = (options && options.domain) || process.env.VUE_APP_OS_API;
+    let config = {
+        // 同时发送cookie和basic auth
+        withCredentials: true,
+        headers: {
+            Authorization: "Bearer " + User.getToken(),
+        },
+        baseURL: domain,
+    };
+
+    if (options && options.progress) {
+        config.onUploadProgress = options.progress;
+    }
+
+    // 创建实例
+    const ins = axios.create(config);
+
+    // 指定拦截器
+    installStandardInterceptors(ins, options);
+
+    return ins;
+}
+
+export { $uc, $cms, $os };
