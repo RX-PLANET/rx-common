@@ -30,7 +30,7 @@ export function getCdnLink(path, size) {
  * @param {string|array|number} size
  * @return {string}
  */
-function buildOssSuffix(size) {
+export function buildOssSuffix(size) {
     let suffix = "";
     if (size) {
         // 长宽不一致
