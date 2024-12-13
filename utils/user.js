@@ -196,7 +196,7 @@ class User {
     // 生成设备指纹
     generateFingerprint(callback) {
         const cache = localStorage.getItem("fingerprint");
-        if (cache) {
+        if (cache && cache.length == 32) {
             return cache;
         }
         Fingerprint2.get(function (components) {
