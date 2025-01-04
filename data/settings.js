@@ -9,5 +9,5 @@ module.exports = {
     tokenExpires: 2592000000, // 30 days
 
     // CDN
-    __cdn: "https://cdn.iruxu.com",
+    __cdn: "https://cdn.2kog.com",
 };

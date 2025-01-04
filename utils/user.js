@@ -1,4 +1,4 @@
-import { tokenExpires, tokenKey } from "../settings";
+import { tokenExpires, tokenKey } from "../data/settings";
 import Fingerprint2 from "fingerprintjs2";
 import axios from "axios";
 import { getCdnLink } from "./common";
