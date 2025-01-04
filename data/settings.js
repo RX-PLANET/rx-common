@@ -1,3 +1,4 @@
+const globalSettings = require("./global.json");
 module.exports = {
     // document title
     Title: "User Center",
@@ -9,5 +10,5 @@ module.exports = {
     tokenExpires: 2592000000, // 30 days
 
     // CDN
-    __cdn: "https://cdn.2kog.com",
+    __cdn: globalSettings.__cdn,
 };
