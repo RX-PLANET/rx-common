@@ -1,4 +1,12 @@
 {
     "__cdn":"https://cdn.2kog.com",
-    "__uc" : "https://uc.2kog.com"
+
+    "__api" : "https://api.2kog.com",
+
+    "__region":{
+        "sg" : "https://sg.2kog.com",
+        "cn" : "https://cn.2kog.com",
+        "us" : "https://us.2kog.com",
+        "uk" : "https://uk.2kog.com"
+    }
 }
