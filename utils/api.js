@@ -18,7 +18,7 @@ function $uc(options = { interceptor: true }, axiosConfig = {}) {
     if (options.domain) {
         domain = options.domain
     } else if (options.region) {
-        domain = "https://uc." + options.region + GlobalConfig.__domain
+        domain = `https://uc.${options.region}.${GlobalConfig.__domain}`
     } else {
         domain = process.env.VUE_APP_UC_API || process.env.VUE_APP_COMMON_API;
     }
