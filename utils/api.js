@@ -17,8 +17,8 @@ function $uc(options = { interceptor: true }, axiosConfig = {}) {
     let domain = ""
     if (options.domain) {
         domain = options.domain
-    } else if (options.region && GlobalConfig['__zone'][options.region]) {
-        domain = GlobalConfig['__zone'][options.zone]
+    } else if (options.region) {
+        domain = "https://uc." + options.region + GlobalConfig.__domain
     } else {
         domain = process.env.VUE_APP_UC_API || process.env.VUE_APP_COMMON_API;
     }
@@ -57,10 +57,10 @@ function $cms(options = { interceptor: true }, axiosConfig = {}) {
     let domain = ""
     if (options.domain) {
         domain = options.domain
-    } else if (options.region && GlobalConfig['__zone'][options.region]) {
-        domain = GlobalConfig['__zone'][options.zone]
+    } else if (options.region) {
+        domain = "https://cms." + options.region + GlobalConfig.__domain
     } else {
-        domain = process.env.VUE_APP_UC_API || process.env.VUE_APP_COMMON_API;
+        domain = process.env.VUE_APP_CMS_API || process.env.VUE_APP_COMMON_API;
     }
 
     // 设置请求头
@@ -96,10 +96,10 @@ function $os(options = { interceptor: true }, axiosConfig = {}) {
     let domain = ""
     if (options.domain) {
         domain = options.domain
-    } else if (options.region && GlobalConfig['__zone'][options.region]) {
-        domain = GlobalConfig['__zone'][options.zone]
+    } else if (options.region) {
+        domain = "https://os." + options.region + GlobalConfig.__domain
     } else {
-        domain = process.env.VUE_APP_UC_API || process.env.VUE_APP_COMMON_API;
+        domain = process.env.VUE_APP_OS_API || process.env.VUE_APP_COMMON_API;
     }
 
     // 设置请求头

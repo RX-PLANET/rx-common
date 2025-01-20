@@ -3,10 +3,11 @@
 
     "__api" : "https://api.2kog.com",
 
+    "__domain" : "2kog.com",
     "__region":{
-        "sg" : "https://sg.2kog.com",
-        "cn" : "https://cn.2kog.com",
-        "us" : "https://us.2kog.com",
-        "uk" : "https://uk.2kog.com"
+        "cn" : "中国",
+        "sg" : "亚太",
+        "us" : "美洲",
+        "uk" : "欧洲"
     }
 }
