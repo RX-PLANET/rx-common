@@ -31,7 +31,7 @@ function $uc(options = { interceptor: true }, axiosConfig = {}) {
             Authorization: "Bearer " + User.getToken(),
             "user-device-fingerprint": User.getDeviceFingerprint(),
         },
-        baseURL: domain,
+        baseURL: domain + '/api/uc',
     };
 
     // 设置进度条
@@ -70,7 +70,7 @@ function $cms(options = { interceptor: true }, axiosConfig = {}) {
         headers: {
             Authorization: "Bearer " + User.getToken(),
         },
-        baseURL: domain,
+        baseURL: domain + '/api/cms',
     };
 
     // 设置进度条
@@ -109,7 +109,7 @@ function $os(options = { interceptor: true }, axiosConfig = {}) {
         headers: {
             Authorization: "Bearer " + User.getToken(),
         },
-        baseURL: domain,
+        baseURL: domain + '/api/os',
     };
 
     // 设置进度条
