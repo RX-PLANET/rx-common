@@ -11,16 +11,18 @@ import User from "./user.js";
 import GlobalConfig from '../data/global.json'
 
 // uc通用请求接口
-function $uc(options = { interceptor: true }, axiosConfig = {}) {
+function $uc(options = {}, axiosConfig = {}) {
+    // 解构options并设置默认值
+    const { interceptor = true, domain, region, progress } = options;
 
     // 获取请求域名
-    let domain = ""
-    if (options.domain) {
-        domain = options.domain
-    } else if (options.region) {
-        domain = `https://uc.${options.region}.${GlobalConfig.__domain}`
+    let requestDomain = ""
+    if (domain) {
+        requestDomain = domain
+    } else if (region) {
+        requestDomain = `https://uc.${region}.${GlobalConfig.__domain}`
     } else {
-        domain = process.env.VUE_APP_UC_API || process.env.VUE_APP_COMMON_API;
+        requestDomain = process.env.VUE_APP_UC_API || process.env.VUE_APP_COMMON_API;
     }
 
     // 设置请求头
@@ -31,19 +33,19 @@ function $uc(options = { interceptor: true }, axiosConfig = {}) {
             Authorization: "Bearer " + User.getToken(),
             "user-device-fingerprint": User.getDeviceFingerprint(),
         },
-        baseURL: domain + '/api/uc',
+        baseURL: requestDomain + '/api/uc',
     };
 
     // 设置进度条
-    if (options.progress) {
-        config.onUploadProgress = options.progress;
+    if (progress) {
+        config.onUploadProgress = progress;
     }
 
     // 创建实例
     const ins = axios.create(Object.assign(axiosConfig, config));
 
     // 指定拦截器
-    if (options.interceptor) {
+    if (interceptor) {
         installStandardInterceptors(ins, options);
     }
 
@@ -51,16 +53,18 @@ function $uc(options = { interceptor: true }, axiosConfig = {}) {
 }
 
 // cms通用请求接口
-function $cms(options = { interceptor: true }, axiosConfig = {}) {
+function $cms(options = {}, axiosConfig = {}) {
+    // 解构options并设置默认值
+    const { interceptor = true, domain, region, progress } = options;
 
     // 获取请求域名
-    let domain = ""
-    if (options.domain) {
-        domain = options.domain
-    } else if (options.region) {
-        domain = "https://cms." + options.region + GlobalConfig.__domain
+    let requestDomain = ""
+    if (domain) {
+        requestDomain = domain
+    } else if (region) {
+        requestDomain = "https://cms." + region + GlobalConfig.__domain
     } else {
-        domain = process.env.VUE_APP_CMS_API || process.env.VUE_APP_COMMON_API;
+        requestDomain = process.env.VUE_APP_CMS_API || process.env.VUE_APP_COMMON_API;
     }
 
     // 设置请求头
@@ -70,19 +74,19 @@ function $cms(options = { interceptor: true }, axiosConfig = {}) {
         headers: {
             Authorization: "Bearer " + User.getToken(),
         },
-        baseURL: domain + '/api/cms',
+        baseURL: requestDomain + '/api/cms',
     };
 
     // 设置进度条
-    if (options.progress) {
-        config.onUploadProgress = options.progress;
+    if (progress) {
+        config.onUploadProgress = progress;
     }
 
     // 创建实例
     const ins = axios.create(Object.assign(axiosConfig, config));
 
     // 指定拦截器
-    if (options.interceptor) {
+    if (interceptor) {
         installStandardInterceptors(ins, options);
     }
 
@@ -90,16 +94,17 @@ function $cms(options = { interceptor: true }, axiosConfig = {}) {
 }
 
 // os通用请求接口
-function $os(options = { interceptor: true }, axiosConfig = {}) {
-
+function $os(options = {}, axiosConfig = {}) {
+    // 解构options并设置默认值
+    const { interceptor = true, domain, region, progress } = options;
     // 获取请求域名
-    let domain = ""
-    if (options.domain) {
-        domain = options.domain
-    } else if (options.region) {
-        domain = "https://os." + options.region + GlobalConfig.__domain
+    let requestDomain = ""
+    if (domain) {
+        requestDomain = domain
+    } else if (region) {
+        requestDomain = "https://os." + region + GlobalConfig.__domain
     } else {
-        domain = process.env.VUE_APP_OS_API || process.env.VUE_APP_COMMON_API;
+        requestDomain = process.env.VUE_APP_OS_API || process.env.VUE_APP_COMMON_API;
     }
 
     // 设置请求头
@@ -109,19 +114,19 @@ function $os(options = { interceptor: true }, axiosConfig = {}) {
         headers: {
             Authorization: "Bearer " + User.getToken(),
         },
-        baseURL: domain + '/api/os',
+        baseURL: requestDomain + '/api/os',
     };
 
     // 设置进度条
-    if (options.progress) {
-        config.onUploadProgress = options.progress;
+    if (progress) {
+        config.onUploadProgress = progress;
     }
 
     // 创建实例
     const ins = axios.create(Object.assign(axiosConfig, config));
 
     // 指定拦截器
-    if (options.interceptor) {
+    if (interceptor) {
         installStandardInterceptors(ins, options);
     }
 
