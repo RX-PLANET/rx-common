@@ -1,6 +1,6 @@
 {
     "name": "@iruxu/rx-common",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "description": "iruxu common package",
     "main": "main.js",
     "scripts": {

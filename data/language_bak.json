@@ -1,0 +1,250 @@
+{
+    "languages": [
+        {
+            "langCode": "en-US",
+            "name": "English",
+            "country": "United States",
+            "countryCode": "us"
+        },
+        {
+            "langCode": "zh-CN",
+            "name": "简体中文",
+            "country": "中国",
+            "countryCode": "cn"
+        },
+        {
+            "langCode": "zh-TW",
+            "name": "繁體中文",
+            "country": "中国台湾",
+            "countryCode": "cn"
+        },
+        {
+            "langCode": "ja-JP",
+            "name": "日本語",
+            "country": "日本",
+            "countryCode": "jp"
+        },
+        {
+            "langCode": "ko-KR",
+            "name": "한국어",
+            "country": "대한민국",
+            "countryCode": "kr"
+        },
+        {
+            "langCode": "es-ES",
+            "name": "Español",
+            "country": "España",
+            "countryCode": "es"
+        },
+        {
+            "langCode": "fr-FR",
+            "name": "Français",
+            "country": "France",
+            "countryCode": "fr"
+        },
+        {
+            "langCode": "de-DE",
+            "name": "Deutsch",
+            "country": "Deutschland",
+            "countryCode": "de"
+        },
+        {
+            "langCode": "it-IT",
+            "name": "Italiano",
+            "country": "Italia",
+            "countryCode": "it"
+        },
+        {
+            "langCode": "pt-BR",
+            "name": "Português",
+            "country": "Brasil",
+            "countryCode": "br"
+        },
+        {
+            "langCode": "ru-RU",
+            "name": "Русский",
+            "country": "Россия",
+            "countryCode": "ru"
+        },
+        {
+            "langCode": "tr-TR",
+            "name": "Türkçe",
+            "country": "Türkiye",
+            "countryCode": "tr"
+        },
+        {
+            "langCode": "cs-CZ",
+            "name": "Čeština",
+            "country": "Česká republika",
+            "countryCode": "cz"
+        },
+        {
+            "langCode": "da-DK",
+            "name": "Dansk",
+            "country": "Danmark",
+            "countryCode": "dk"
+        },
+        {
+            "langCode": "id-ID",
+            "name": "Indonesia",
+            "country": "Indonesia",
+            "countryCode": "id"
+        },
+        {
+            "langCode": "hu-HU",
+            "name": "Magyar",
+            "country": "Magyarország",
+            "countryCode": "hu"
+        },
+        {
+            "langCode": "nl-NL",
+            "name": "Nederlands",
+            "country": "Nederland",
+            "countryCode": "nl"
+        },
+        {
+            "langCode": "no-NO",
+            "name": "Norsk",
+            "country": "Norge",
+            "countryCode": "no"
+        },
+        {
+            "langCode": "pl-PL",
+            "name": "Polski",
+            "country": "Polska",
+            "countryCode": "pl"
+        },
+        {
+            "langCode": "sv-SE",
+            "name": "Svenska",
+            "country": "Sverige",
+            "countryCode": "se"
+        },
+        {
+            "langCode": "ar-SA",
+            "name": "العربية",
+            "country": "المملكة العربية السعودية",
+            "countryCode": "sa"
+        },
+        {
+            "langCode": "hi-IN",
+            "name": "हिन्दी",
+            "country": "भारत",
+            "countryCode": "in"
+        },
+        {
+            "langCode": "bn-BD",
+            "name": "বাংলা",
+            "country": "বাংলাদেশ",
+            "countryCode": "bd"
+        },
+        {
+            "langCode": "th-TH",
+            "name": "ไทย",
+            "country": "ประเทศไทย",
+            "countryCode": "th"
+        },
+        {
+            "langCode": "ur-PK",
+            "name": "اردو",
+            "country": "پاکستان",
+            "countryCode": "pk"
+        },
+        {
+            "langCode": "vi-VN",
+            "name": "Tiếng Việt",
+            "country": "Việt Nam",
+            "countryCode": "vn"
+        },
+        {
+            "langCode": "sw-KE",
+            "name": "Kiswahili",
+            "country": "Kenya",
+            "countryCode": "ke"
+        },
+        {
+            "langCode": "pa-IN",
+            "name": "ਪੰਜਾਬੀ",
+            "country": "India",
+            "countryCode": "in"
+        },
+        {
+            "langCode": "ta-IN",
+            "name": "தமிழ்",
+            "country": "India",
+            "countryCode": "in"
+        },
+        {
+            "langCode": "ml-IN",
+            "name": "മലയാളം",
+            "country": "India",
+            "countryCode": "in"
+        },
+        {
+            "langCode": "fa-IR",
+            "name": "فارسی",
+            "country": "ایران",
+            "countryCode": "ir"
+        },
+        {
+            "langCode": "ha-NG",
+            "name": "Hausa",
+            "country": "Nigeria",
+            "countryCode": "ng"
+        },
+        {
+            "langCode": "tl-PH",
+            "name": "Filipino",
+            "country": "Philippines",
+            "countryCode": "ph"
+        },
+        {
+            "langCode": "my-MM",
+            "name": "မြန်မာ",
+            "country": "Myanmar",
+            "countryCode": "mm"
+        },
+        {
+            "langCode": "am-ET",
+            "name": "አማርኛ",
+            "country": "Ethiopia",
+            "countryCode": "et"
+        },
+        {
+            "langCode": "ne-NP",
+            "name": "नेपाली",
+            "country": "Nepal",
+            "countryCode": "np"
+        },
+        {
+            "langCode": "zu-ZA",
+            "name": "IsiZulu",
+            "country": "South Africa",
+            "countryCode": "za"
+        },
+        {
+            "langCode": "ca-ES",
+            "name": "Català",
+            "country": "Espanya",
+            "countryCode": "es"
+        },
+        {
+            "langCode": "cy-GB",
+            "name": "Cymraeg",
+            "country": "United Kingdom",
+            "countryCode": "gb"
+        },
+        {
+            "langCode": "ga-IE",
+            "name": "Gaeilge",
+            "country": "Ireland",
+            "countryCode": "ie"
+        },
+        {
+            "langCode": "he-IL",
+            "name": "עברית",
+            "country": "ישראל",
+            "countryCode": "il"
+        }
+    ]
+}
