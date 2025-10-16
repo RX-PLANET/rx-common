@@ -177,4 +177,45 @@ function $pay(options = {}, axiosConfig = {}) {
   return ins;
 }
 
-export { $uc, $cms, $os, $pay };
+// fsf通用请求接口
+function $fsf(options = {}, axiosConfig = {}) {
+  // 解构options并设置默认值
+  const { interceptor = true, domain, region, progress } = options;
+  // 获取请求域名
+  let requestDomain = "";
+  if (domain) {
+    requestDomain = domain;
+  } else if (region) {
+    requestDomain = "https://api-fsf." + region + GlobalConfig.__domain;
+  } else {
+    requestDomain =
+      process.env.VUE_APP_FSF_API || process.env.VUE_APP_COMMON_API;
+  }
+
+  // 设置请求头
+  let config = {
+    // 同时发送cookie和basic auth
+    withCredentials: true,
+    headers: {
+      Authorization: "Bearer " + User.getToken(),
+    },
+    baseURL: requestDomain + "/api/fsf",
+  };
+
+  // 设置进度条
+  if (progress) {
+    config.onUploadProgress = progress;
+  }
+
+  // 创建实例
+  const ins = axios.create(Object.assign(axiosConfig, config));
+
+  // 指定拦截器
+  if (interceptor) {
+    installStandardInterceptors(ins, options);
+  }
+
+  return ins;
+}
+
+export { $uc, $cms, $os, $pay, $fsf };
