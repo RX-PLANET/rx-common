@@ -1,11 +1,11 @@
 // 获取文档标题
-import { Title, __cdn } from "../data/settings";
+import Setting from "../data/settings";
 
 export function getPageTitle(pageTitle) {
     if (pageTitle) {
-        return `${pageTitle} - ${Title}`;
+        return `${pageTitle} - ${Setting.Title}`;
     }
-    return Title || "Admin";
+    return Setting.Title || "Admin";
 }
 
 /**
@@ -17,7 +17,7 @@ export function getPageTitle(pageTitle) {
  */
 export function getCdnLink(path, size) {
     if (path) {
-        let url = `${__cdn}${path}`;
+        let url = `${Setting.__cdn}${path}`;
         return (url += buildOssSuffix(size));
     } else {
         return path;

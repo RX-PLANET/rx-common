@@ -1,4 +1,4 @@
-import  globalSettings from "./global.json";
+import globalSettings from "./global.json";
 export default {
     // document title
     Title: "User Center",
