@@ -1,5 +1,5 @@
-const globalSettings = require("./global.json");
-module.exports = {
+import  globalSettings from "./global.json";
+export default {
     // document title
     Title: "User Center",
 

@@ -1,5 +1,5 @@
 // 获取文档标题
-const { Title, __cdn } = require("../data/settings");
+import { Title, __cdn } from "../data/settings";
 
 export function getPageTitle(pageTitle) {
     if (pageTitle) {
