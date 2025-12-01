@@ -1,17 +1,17 @@
-# FUYANLOVE
+# 前后端公共依赖包
 
 公共基础函数模块，路径常量，外部通用接口地址，全局主题等
 
 ## Step.1 Install
 
 ```
-$ npm install @fuyanlove/pkg-common --save
+$ npm install @2kog/pkg-common --save
 ```
 
 ## Step.2 Import
 
 ```javascript
-import RxTime from "@fuyanlove/pkg-common/utils/rx-time.js";
+import RxTime from "@2kog/pkg-common/utils/rx-time.js";
 ```
 
 ## Js & Data Docs
