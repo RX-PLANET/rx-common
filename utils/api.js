@@ -12,209 +12,208 @@ import GlobalConfig from "../data/global.json";
 
 // uc通用请求接口
 function $uc(options = {}, axiosConfig = {}) {
-  // 解构options并设置默认值
-  const { interceptor = true, domain, region, progress } = options;
+    // 解构options并设置默认值
+    const { interceptor = true, domain, region, progress } = options;
 
-  // 获取请求域名
-  let requestDomain = "";
-  if (domain) {
-    requestDomain = domain;
-  } else if (region) {
-    requestDomain = `https://uc.${region}.${GlobalConfig.__domain}`;
-  } else {
-    requestDomain =
-      process.env.VUE_APP_UC_API || process.env.VUE_APP_COMMON_API;
-  }
+    // 获取请求域名
+    let requestDomain = "";
+    if (domain) {
+        requestDomain = domain;
+    } else if (region) {
+        requestDomain = `https://uc.${region}.${GlobalConfig.__domain}`;
+    } else {
+        requestDomain = process.env.VUE_APP_UC_API || process.env.VUE_APP_COMMON_API;
+    }
 
-  // 设置请求头
-  let config = {
-    // 同时发送cookie和basic auth
-    withCredentials: true,
-    headers: {
-      Authorization: "Bearer " + User.getToken(),
-      "user-device-fingerprint": User.getDeviceFingerprint(),
-    },
-    baseURL: requestDomain + "/api/uc",
-  };
+    // 设置请求头
+    let config = {
+        // 同时发送cookie和basic auth
+        withCredentials: true,
+        headers: {
+            Authorization: "Bearer " + User.getToken(),
+            "user-device-fingerprint": User.getDeviceFingerprint(),
+        },
+        baseURL: requestDomain + "/api/uc",
+    };
 
-  // 设置进度条
-  if (progress) {
-    config.onUploadProgress = progress;
-  }
+    // 设置进度条
+    if (progress) {
+        config.onUploadProgress = progress;
+    }
 
-  // 创建实例
-  const ins = axios.create(Object.assign(axiosConfig, config));
+    // 创建实例
+    const ins = axios.create(Object.assign(axiosConfig, config));
 
-  // 指定拦截器
-  if (interceptor) {
-    installStandardInterceptors(ins, options);
-  }
+    // 指定拦截器
+    if (interceptor) {
+        installStandardInterceptors(ins, options);
+    }
 
-  return ins;
+    return ins;
 }
 
 // cms通用请求接口
 function $cms(options = {}, axiosConfig = {}) {
-  // 解构options并设置默认值
-  const { interceptor = true, domain, region, progress } = options;
+    // 解构options并设置默认值
+    const { interceptor = true, domain, region, progress } = options;
 
-  // 获取请求域名
-  let requestDomain = "";
-  if (domain) {
-    requestDomain = domain;
-  } else if (region) {
-    requestDomain = "https://cms." + region + GlobalConfig.__domain;
-  } else {
-    requestDomain =
-      process.env.VUE_APP_CMS_API || process.env.VUE_APP_COMMON_API;
-  }
+    // 获取请求域名
+    let requestDomain = "";
+    if (domain) {
+        requestDomain = domain;
+    } else if (region) {
+        requestDomain = "https://cms." + region + GlobalConfig.__domain;
+    } else {
+        requestDomain = process.env.VUE_APP_CMS_API || process.env.VUE_APP_COMMON_API;
+    }
 
-  // 设置请求头
-  let config = {
-    // 同时发送cookie和basic auth
-    withCredentials: true,
-    headers: {
-      Authorization: "Bearer " + User.getToken(),
-    },
-    baseURL: requestDomain + "/api/cms",
-  };
+    // 设置请求头
+    let config = {
+        // 同时发送cookie和basic auth
+        withCredentials: true,
+        headers: {
+            Authorization: "Bearer " + User.getToken(),
+            "user-device-fingerprint": User?.getDeviceFingerprint(),
+        },
+        baseURL: requestDomain + "/api/cms",
+    };
 
-  // 设置进度条
-  if (progress) {
-    config.onUploadProgress = progress;
-  }
+    // 设置进度条
+    if (progress) {
+        config.onUploadProgress = progress;
+    }
 
-  // 创建实例
-  const ins = axios.create(Object.assign(axiosConfig, config));
+    // 创建实例
+    const ins = axios.create(Object.assign(axiosConfig, config));
 
-  // 指定拦截器
-  if (interceptor) {
-    installStandardInterceptors(ins, options);
-  }
+    // 指定拦截器
+    if (interceptor) {
+        installStandardInterceptors(ins, options);
+    }
 
-  return ins;
+    return ins;
 }
 
 // os通用请求接口
 function $os(options = {}, axiosConfig = {}) {
-  // 解构options并设置默认值
-  const { interceptor = true, domain, region, progress } = options;
-  // 获取请求域名
-  let requestDomain = "";
-  if (domain) {
-    requestDomain = domain;
-  } else if (region) {
-    requestDomain = "https://os." + region + GlobalConfig.__domain;
-  } else {
-    requestDomain =
-      process.env.VUE_APP_OS_API || process.env.VUE_APP_COMMON_API;
-  }
+    // 解构options并设置默认值
+    const { interceptor = true, domain, region, progress } = options;
+    // 获取请求域名
+    let requestDomain = "";
+    if (domain) {
+        requestDomain = domain;
+    } else if (region) {
+        requestDomain = "https://os." + region + GlobalConfig.__domain;
+    } else {
+        requestDomain = process.env.VUE_APP_OS_API || process.env.VUE_APP_COMMON_API;
+    }
 
-  // 设置请求头
-  let config = {
-    // 同时发送cookie和basic auth
-    withCredentials: true,
-    headers: {
-      Authorization: "Bearer " + User.getToken(),
-    },
-    baseURL: requestDomain + "/api/os",
-  };
+    // 设置请求头
+    let config = {
+        // 同时发送cookie和basic auth
+        withCredentials: true,
+        headers: {
+            Authorization: "Bearer " + User.getToken(),
+            "user-device-fingerprint": User?.getDeviceFingerprint() || undefined,
+        },
+        baseURL: requestDomain + "/api/os",
+    };
 
-  // 设置进度条
-  if (progress) {
-    config.onUploadProgress = progress;
-  }
+    // 设置进度条
+    if (progress) {
+        config.onUploadProgress = progress;
+    }
 
-  // 创建实例
-  const ins = axios.create(Object.assign(axiosConfig, config));
+    // 创建实例
+    const ins = axios.create(Object.assign(axiosConfig, config));
 
-  // 指定拦截器
-  if (interceptor) {
-    installStandardInterceptors(ins, options);
-  }
+    // 指定拦截器
+    if (interceptor) {
+        installStandardInterceptors(ins, options);
+    }
 
-  return ins;
+    return ins;
 }
 
 // pay通用请求接口
 function $pay(options = {}, axiosConfig = {}) {
-  // 解构options并设置默认值
-  const { interceptor = true, domain, region, progress } = options;
-  // 获取请求域名
-  let requestDomain = "";
-  if (domain) {
-    requestDomain = domain;
-  } else if (region) {
-    requestDomain = "https://pay." + region + GlobalConfig.__domain;
-  } else {
-    requestDomain =
-      process.env.VUE_APP_PAY_API || process.env.VUE_APP_COMMON_API;
-  }
+    // 解构options并设置默认值
+    const { interceptor = true, domain, region, progress } = options;
+    // 获取请求域名
+    let requestDomain = "";
+    if (domain) {
+        requestDomain = domain;
+    } else if (region) {
+        requestDomain = "https://pay." + region + GlobalConfig.__domain;
+    } else {
+        requestDomain = process.env.VUE_APP_PAY_API || process.env.VUE_APP_COMMON_API;
+    }
 
-  // 设置请求头
-  let config = {
-    // 同时发送cookie和basic auth
-    withCredentials: true,
-    headers: {
-      Authorization: "Bearer " + User.getToken(),
-    },
-    baseURL: requestDomain + "/api/pay",
-  };
+    // 设置请求头
+    let config = {
+        // 同时发送cookie和basic auth
+        withCredentials: true,
+        headers: {
+            Authorization: "Bearer " + User.getToken(),
+        },
+        baseURL: requestDomain + "/api/pay",
+    };
 
-  // 设置进度条
-  if (progress) {
-    config.onUploadProgress = progress;
-  }
+    // 设置进度条
+    if (progress) {
+        config.onUploadProgress = progress;
+    }
 
-  // 创建实例
-  const ins = axios.create(Object.assign(axiosConfig, config));
+    // 创建实例
+    const ins = axios.create(Object.assign(axiosConfig, config));
 
-  // 指定拦截器
-  if (interceptor) {
-    installStandardInterceptors(ins, options);
-  }
+    // 指定拦截器
+    if (interceptor) {
+        installStandardInterceptors(ins, options);
+    }
 
-  return ins;
+    return ins;
 }
 
 // fsf请求接口
 function $fsf(options = {}, axiosConfig = {}) {
-  // 解构options并设置默认值
-  const { interceptor = true, domain, region, progress } = options;
-  // 获取请求域名
-  let requestDomain = "";
-  if (domain) {
-    requestDomain = domain;
-  } else if (region) {
-    requestDomain = "https://api-fsf." + region + GlobalConfig.__domain;
-  } else {
-    requestDomain = import.meta.env.VITE_COMMON_API;
-  }
+    // 解构options并设置默认值
+    const { interceptor = true, domain, region, progress } = options;
+    // 获取请求域名
+    let requestDomain = "";
+    if (domain) {
+        requestDomain = domain;
+    } else if (region) {
+        requestDomain = "https://api-fsf." + region + GlobalConfig.__domain;
+    } else {
+        requestDomain = import.meta.env.VITE_COMMON_API;
+    }
 
-  // 设置请求头
-  let config = {
-    // 同时发送cookie和basic auth
-    withCredentials: true,
-    headers: {
-      Authorization: "Bearer " + User.getToken(),
-    },
-    baseURL: requestDomain + "/api/fsf",
-  };
+    // 设置请求头
+    let config = {
+        // 同时发送cookie和basic auth
+        withCredentials: true,
+        headers: {
+            Authorization: "Bearer " + User.getToken(),
+            "user-device-fingerprint": User?.getDeviceFingerprint() || undefined,
+        },
+        baseURL: requestDomain + "/api/fsf",
+    };
 
-  // 设置进度条
-  if (progress) {
-    config.onUploadProgress = progress;
-  }
+    // 设置进度条
+    if (progress) {
+        config.onUploadProgress = progress;
+    }
 
-  // 创建实例
-  const ins = axios.create(Object.assign(axiosConfig, config));
+    // 创建实例
+    const ins = axios.create(Object.assign(axiosConfig, config));
 
-  // 指定拦截器
-  if (interceptor) {
-    installStandardInterceptors(ins, options);
-  }
+    // 指定拦截器
+    if (interceptor) {
+        installStandardInterceptors(ins, options);
+    }
 
-  return ins;
+    return ins;
 }
 
 function $http(options = {}, axiosConfig = {}) {
@@ -226,7 +225,7 @@ function $http(options = {}, axiosConfig = {}) {
     if (domain) {
         requestDomain = domain;
     } else if (region) {
-        requestDomain = "https://" + region + '.' + GlobalConfig.__domain;
+        requestDomain = "https://" + region + "." + GlobalConfig.__domain;
     } else {
         requestDomain = import.meta.env.VITE_COMMON_API;
     }
@@ -237,6 +236,7 @@ function $http(options = {}, axiosConfig = {}) {
         withCredentials: true,
         headers: {
             Authorization: "Bearer " + User.getToken(),
+            "user-device-fingerprint": User?.getDeviceFingerprint() || undefined,
         },
         baseURL: requestDomain,
     };
